@@ -11,12 +11,12 @@ Independent website source for `https://watches.sandydcarter.com`.
 
 The Shopify website at `sandydcarter.com`, its `www` host, settings, theme, content, integrations, and DNS are outside this repository and are not modified by this project.
 
-## Required DNS record
+## DNS record
 
-After the GitHub owner is known, add one record at the current DNS provider:
+The isolated subdomain record is configured at the current DNS provider:
 
 | Type | Host | Target | TTL |
 | --- | --- | --- | --- |
-| CNAME | `watches` | `Kuberwastaken.github.io` | Automatic |
+| CNAME | `watches` | `Kuberwastaken.github.io` | 1 hour |
 
 Do not alter the root (`@`) or `www` records.
