@@ -13,7 +13,7 @@ const walker=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT);
 while(walker.nextNode())walker.currentNode.nodeValue=walker.currentNode.nodeValue.replace(/November 2026/gi,'December 2026');
 
 const footerIntro=$('.footer-brand p');
-if(footerIntro)footerIntro.textContent=brand.shortDescription;
+if(footerIntro)footerIntro.remove();
 document.querySelectorAll('.footer-col a[href="about-us.html"]').forEach(link=>{link.href=brand.aboutPath;link.textContent='Brand facts'});
 document.querySelectorAll('.mobile-nav').forEach(nav=>{if(!nav.querySelector(`[href="${brand.aboutPath}"]`)){const link=document.createElement('a');link.href=brand.aboutPath;link.textContent='About the brand';nav.insertBefore(link,nav.querySelector('[href="contact.html"]'))}});
 
