@@ -17,6 +17,6 @@ The isolated subdomain record is configured at the current DNS provider:
 
 | Type | Host | Target | TTL |
 | --- | --- | --- | --- |
-| CNAME | `watches` | `Kuberwastaken.github.io` | 1 hour |
+| CNAME | `watches` | `houseofbrand.github.io` | 1 hour |
 
 Do not alter the root (`@`) or `www` records.
