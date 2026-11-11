@@ -16,7 +16,8 @@ targets = {
   'womens-watches.html' => ['designer watches for women', 'minimalist watches for women; elegant watches'],
   'signature.html' => ['signature watch collection', 'contemporary watch design; timeless watch aesthetics'],
   'about-us.html' => ['Sandy D Carter watch brand', 'India-registered watch brand; Amsterdam-inspired design'],
-  'story-behind-the-brand/index.html' => ['Story Behind Sandy D. Carter', 'Amsterdam design journey since 2011; Sandy and Carter designers'],
+  'about-sandy-d-carter.html' => ['About Sandy D Carter', 'brand owner; House Of Brands Fashion LLP; quartz watches'],
+  'story-behind-the-brand/index.html' => ['Story Behind Sandy D. Carter', 'Amsterdam design inspiration; fictional creative personalities'],
   'design-philosophy.html' => ['watch design philosophy', 'minimalist watch design; functional aesthetics'],
   'netherlands.html' => ['Amsterdam design inspiration', 'Dutch design influence; European-inspired watches'],
   'journal.html' => ['watch design journal', 'watch education; contemporary watch design'],
@@ -64,6 +65,17 @@ report = <<~MD
   Scope: `https://watches.sandydcarter.com/` only  
   Keyword data status: qualitative mapping. No approved live keyword-volume or difficulty provider was available, so no numeric estimates are presented.
 
+  ## Implementation summary
+
+  - Updated shared brand data, visible page content, launch messaging, metadata and connected entity schema.
+  - Created `about-sandy-d-carter.html` as a crawlable factual brand reference page with FAQPage schema.
+  - Created `llms.txt` with concise factual information and authoritative internal links.
+  - Updated the homepage, About, Story, FAQ, Sandy, Carter and shared-perspective content to distinguish fictional creative personalities from the legal organization.
+  - Added the new brand-information page to the XML sitemap and internal navigation.
+  - Added standardized official-profile copy in `SOCIAL-BRAND-COPY.md`.
+  - Preserved existing visual branding, indexed URLs, product-preview boundaries and official social-profile links.
+  - Outstanding: live Core Web Vitals field data, indexing status, keyword-volume data and Search Console performance require external account data and recrawl time.
+
   ## Page inventory
 
   | Page | SEO title | Meta description | H1 | Primary target | Secondary targets | Canonical | Schema | Indexability | Main words | Internal links | Images |
@@ -84,8 +96,10 @@ report << <<~MD
   - All important page bodies are prerendered into the delivered HTML. JavaScript remains as progressive enhancement.
   - `robots.txt` permits public crawling and declares the XML sitemap.
   - The sitemap includes canonical, indexable pages and excludes the custom 404, the legacy noindex alias, and three thin pre-launch utility pages.
-  - Organization, WebSite, WebPage, BreadcrumbList and Article schema are used where appropriate. Product, Offer, Review, AggregateRating and LocalBusiness schema are intentionally absent.
-  - Official social profiles are included in Organization schema. The Droog Amsterdam address is published only as a clearly attributed design-inspiration reference, not as a brand business address.
+  - Connected Organization, Brand, WebSite and WebPage entities use stable identifiers; BreadcrumbList, Article and FAQPage schema are retained where appropriate.
+  - Product, Offer, Review, AggregateRating and LocalBusiness schema remain absent because no verified product catalogue, offers, ratings or business address are published.
+  - Official social profiles are included in the entity graph. The Droog Amsterdam address is published only as a clearly attributed design-inspiration reference, not as a brand business address.
+  - `llms.txt` provides a concise factual summary and authoritative internal links; it is not treated as an indexing guarantee.
   - Every public HTML document has unique title and description metadata, canonical URL, Open Graph metadata and Twitter card metadata.
 
   ## Keyword architecture
@@ -93,8 +107,9 @@ report << <<~MD
   - Homepage: brand and official-site discovery.
   - Shop: pre-launch collection discovery without purchase intent claims.
   - Men, Women and Signature: distinct collection-design and styling intent.
-  - About: factual brand identity and India registration wording.
-  - Our Story: the approved real design journey beginning in Amsterdam in 2011, including the founder connection and attributed Droog inspiration reference.
+  - About: factual brand identity, legal company relationship, India operations and product focus.
+  - Brand information: direct question-and-answer references for search and answer systems.
+  - Our Story: Amsterdam design inspiration, fictional creative personalities and the relationship between imagination and precision.
   - Design Philosophy and Netherlands: design education and Amsterdam/Dutch influence.
   - Journal and individual articles: informational watch-design, fit, movement, material, care and styling queries.
   - Customer-care pages: policy intent only; thin unavailable services remain noindex until operational.
@@ -105,6 +120,15 @@ report << <<~MD
   - Bing Webmaster Tools verification and sitemap submission: pending account access.
   - Search volume, keyword difficulty and competitor metrics: pending access to an approved keyword-data provider.
   - Product schema, prices, specifications and marketplace purchase links: pending genuine approved products.
+
+  ## Manual Google Search Console checklist
+
+  1. Verify the preferred domain property and confirm HTTPS ownership.
+  2. Submit `https://watches.sandydcarter.com/sitemap.xml`.
+  3. Inspect and request indexing for the homepage, `about-sandy-d-carter.html` and `story-behind-the-brand/`.
+  4. Review Page Indexing, Mobile Usability and Core Web Vitals reports after Google recrawls the deployment.
+  5. Monitor structured-data enhancement reports and correct only evidence-backed issues.
+  6. Track branded queries and page performance without claiming indexing until Search Console confirms it.
 
 MD
 
