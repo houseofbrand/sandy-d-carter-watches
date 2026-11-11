@@ -2,7 +2,7 @@
 body[data-page="home"]{background:var(--warm-ivory);color:var(--deep-charcoal)}
 .editorial-pad{padding:clamp(72px,9vw,140px) clamp(24px,6vw,96px)}
 .world-hero{position:relative;min-height:100svh;display:flex;align-items:center;overflow:hidden;background:var(--midnight);color:#fff}
-.world-hero-media,.world-hero-shade{position:absolute;inset:0}.world-hero-media{background:url('assets/visual-story/06-new-chapter-2026-branded.png') center/cover no-repeat;transform:scale(1.015)}
+.world-hero-media,.world-hero-shade{position:absolute;inset:0}.world-hero-media{background:url('assets/visual-story/06-new-chapter-2026-branded-web.jpg') center/cover no-repeat;transform:scale(1.015)}
 .world-hero-shade{background:linear-gradient(90deg,rgba(10,22,34,.92),rgba(10,22,34,.72) 43%,rgba(10,22,34,.12) 78%),linear-gradient(0deg,rgba(10,22,34,.55),transparent 55%)}
 .world-hero-copy{position:relative;z-index:1;width:min(780px,88%);padding:150px 0 100px clamp(24px,8vw,132px)}
 .world-hero h1{font:500 clamp(64px,9.5vw,146px)/.78 var(--serif);letter-spacing:-.06em;margin:28px 0 34px}.world-hero-lead{font:500 clamp(22px,2.3vw,36px)/1.25 var(--serif);margin:0 0 18px;color:#eadcc4}.world-hero-copy>p:last-of-type{max-width:620px;font-size:clamp(15px,1.3vw,19px);font-weight:300}.world-hero-caption{position:absolute;z-index:1;right:5vw;bottom:38px;margin:0;font-size:9px;letter-spacing:.19em;text-transform:uppercase}.button-dark{background:var(--midnight);color:#fff}.button-light{background:#fff;color:var(--midnight)}
