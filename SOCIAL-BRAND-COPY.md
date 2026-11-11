@@ -4,7 +4,7 @@ Use this wording consistently across official profiles. Confirm platform charact
 
 ## LinkedIn
 
-SANDY D. CARTER is an emerging premium lifestyle watch brand inspired by Amsterdam and European design aesthetics. Developed by House Of Brands Fashion LLP, India, the brand brings together minimalist styling, timeless elegance and contemporary quartz timepieces.
+SANDY D. CARTER is an emerging premium lifestyle watch brand developed in the Netherlands and inspired by Amsterdam and European design aesthetics. The brand is being built for international markets in global alliance with House Of Brands Fashion LLP, India.
 
 ## Instagram
 
@@ -19,10 +19,11 @@ Discover SANDY D. CARTER, an emerging premium lifestyle watch brand inspired by 
 
 ## YouTube About
 
-Discover SANDY D. CARTER—an emerging premium lifestyle watch brand developed and marketed by House Of Brands Fashion LLP, India. Explore the brand story, Amsterdam-inspired design philosophy and upcoming contemporary quartz watch collections for men and women.
+Discover SANDY D. CARTER—an emerging premium lifestyle watch brand developed in the Netherlands and built for international markets in global alliance with House Of Brands Fashion LLP, India. Explore its Amsterdam-inspired design philosophy and upcoming contemporary quartz watch collections for men and women.
 
 ## Accuracy notes
 
-- Amsterdam and Dutch design are creative influences, not manufacturing-origin or headquarters claims.
+- The brand is developed in the Netherlands, but no Dutch legal entity, registered office, manufacturing origin or physical studio is claimed without verification.
+- House Of Brands Fashion LLP, India, is the global development and marketing partner; Myntra is the signed marketplace partner for the planned December 2026 India debut.
 - Sandy and Carter are fictional creative personalities representing imagination and design precision.
 - Do not publish product availability, model specifications, certifications or final prices until verified.

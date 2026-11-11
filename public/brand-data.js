@@ -1,31 +1,16 @@
 window.SDC_BRAND=Object.freeze({
-  name:'SANDY D. CARTER',
-  legalOrganization:'House Of Brands Fashion LLP',
-  category:'Premium Lifestyle Watches',
-  positioning:'Accessible Premium',
-  tagline:'Two Creative Perspectives. One Timeless Design Philosophy.',
-  journeyStart:2011,
-  journeyOrigin:'Amsterdam, Netherlands',
-  philosophy:'European minimalism, Dutch design aesthetics, understated sophistication and timeless styling',
-  launch:'December 2026',
-  pricePositioning:'₹4,000–₹10,000',
-  movement:'Quartz movement',
-  storyPath:'story-behind-the-brand/',
-  storyUrl:'https://watches.sandydcarter.com/story-behind-the-brand/',
-  aboutPath:'about-sandy-d-carter.html',
-  shortDescription:'SANDY D. CARTER is an emerging premium lifestyle watch brand inspired by Amsterdam and European design aesthetics. Developed by House Of Brands Fashion LLP, India, the brand brings together minimalist styling, timeless elegance and contemporary quartz timepieces.',
-  address:Object.freeze({
-    reference:'Droog Amsterdam',
-    street:'Staalstraat 7B',
-    postal:'1011 JJ Amsterdam',
-    country:'Netherlands',
-    context:'Design-inspiration reference only; not a registered office or operational address.'
-  }),
+  name:'SANDY D. CARTER', legalOrganization:'House Of Brands Fashion LLP',
+  category:'Premium Lifestyle Watches', positioning:'Accessible Premium',
+  tagline:'Two Designers. One Shared Perspective.', supportingTagline:'Inspired by Amsterdam. Designed with Purpose.',
+  developmentOrigin:'The Netherlands', journeyStart:2011, journeyOrigin:'Amsterdam, Netherlands',
+  philosophy:'Scandinavian-inspired minimalism, balanced proportions, understated detailing and European design aesthetics',
+  launch:'December 2026', pricePositioning:'₹4,000–₹10,000', movement:'Contemporary quartz analogue watches',
+  marketplacePartner:'Myntra', globalPartner:'House Of Brands Fashion LLP, India',
+  storyPath:'story-behind-the-brand/', storyUrl:'https://watches.sandydcarter.com/story-behind-the-brand/', aboutPath:'about-sandy-d-carter.html',
+  shortDescription:'SANDY D. CARTER is an emerging premium lifestyle watch brand developed in the Netherlands and inspired by Amsterdam and European design aesthetics. The brand brings together Scandinavian-inspired minimalism, considered detailing and contemporary quartz timepieces for men and women.',
+  address:Object.freeze({reference:'Droog Amsterdam',street:'Staalstraat 7B',postal:'1011 JJ Amsterdam',country:'The Netherlands',context:'Droog’s location and a design-inspiration reference; not a SANDY D. CARTER registered or operating office.'}),
   story:Object.freeze({
-    eyebrow:'Our story',
-    title:'THE STORY BEHIND<br>SANDY D. CARTER.',
-    subtitle:'Imagination and precision, expressed through timeless contemporary design.',
-    image:'02-idea-takes-shape-amsterdam-v2.jpg',
-    html:`<p class="story-lede">SANDY D. CARTER represents a contemporary interpretation of European-inspired watch design.</p><p>Inspired by the architectural elegance of Amsterdam and the understated sophistication of Dutch design aesthetics, the brand is built around simplicity, balance and timeless expression.</p><h2>Two fictional creative perspectives</h2><p>Sandy and Carter are fictional creative personalities within the brand story. Sandy represents creative imagination, while Carter represents design precision. Together, they express the relationship between instinct and structure that guides the SANDY D. CARTER design language.</p><p>They are not presented as founders, employees or real-world designers.</p><h2>Amsterdam as inspiration</h2><p>Amsterdam provides a visual and cultural reference through its architectural rhythm, functional creativity and measured use of form. This influence concerns design inspiration only. SANDY D. CARTER does not claim an Amsterdam headquarters, Dutch manufacture or an official partnership with a Dutch design company.</p><aside class="droog-reference" aria-label="Amsterdam design-inspiration reference"><p class="eyebrow">Design-inspiration reference</p><address><strong>Droog Amsterdam</strong><span>Staalstraat 7B</span><span>1011 JJ Amsterdam</span><span>Netherlands</span></address><p class="studio-note">This is a creative reference, not the brand’s registered office or operational address.</p></aside><h2>Minimalist quartz timepieces</h2><p>The product philosophy centres on thoughtfully designed quartz analogue watches for men and women, including contemporary dress watches, leather-strap styles and stainless-steel bracelet styles. Final model specifications, availability and prices will be published only when verified.</p><h2>Developed in India</h2><p>SANDY D. CARTER is developed and marketed by House Of Brands Fashion LLP, India. The brand aims to make refined, European-inspired watch aesthetics accessible to modern consumers.</p><p>The planned India debut is December 2026.</p><div class="story-signature"><strong>SANDY D. CARTER</strong><span>European-inspired. Amsterdam-influenced. Developed in India.</span><span>Timeless contemporary design.</span></div>`
+    eyebrow:'Our story', title:'THE STORY BEHIND<br>SANDY D. CARTER.', subtitle:'Two complementary creative perspectives, united by considered design.', image:'02-idea-takes-shape-amsterdam-v2.jpg',
+    html:`<p class="story-lede">SANDY D. CARTER is an emerging premium lifestyle watch brand developed in the Netherlands and inspired by Amsterdam and European design aesthetics.</p><h2>Two designers. One shared perspective.</h2><p>Sandy and Carter represent two complementary creative personalities at the foundation of the brand identity. Sandy symbolises creative imagination; Carter symbolises design precision. Together, they express a shared appreciation for considered design, clean proportions and everyday functionality.</p><p>They are creative personalities within the brand story, not presented with invented personal biographies, qualifications or professional histories.</p><h2>The meaning of D</h2><p>The letter D pays tribute to Droog Amsterdam, whose distinctive approach to contemporary design has influenced the brand’s creative philosophy. This is a design-inspiration reference; no official commercial partnership or affiliation with Droog is claimed.</p><aside class="droog-reference" aria-label="Amsterdam design-inspiration reference"><p class="eyebrow">Our Amsterdam design inspiration</p><address><strong>Droog Amsterdam</strong><span>Staalstraat 7B</span><span>1011 JJ Amsterdam</span><span>The Netherlands</span></address><p class="studio-note">This is Droog’s location and a reference to the brand’s design inspiration, not a SANDY D. CARTER registered or operating office.</p></aside><h2>Developed in the Netherlands</h2><p>The brand’s design philosophy brings together Scandinavian-inspired minimalism, balanced proportions, understated detailing and contemporary quartz analogue watches for men and women. It is being developed for international markets in global alliance with House Of Brands Fashion LLP, India.</p><h2>India debut</h2><p>SANDY D. CARTER has signed a marketplace partnership with Myntra for its planned India debut in December 2026. Individual products, specifications, final prices and availability will be published only when officially confirmed.</p><div class="story-signature"><strong>SANDY D. CARTER</strong><span>Two Designers. One Shared Perspective.</span><span>Inspired by Amsterdam. Designed with Purpose.</span></div>`
   })
 });

@@ -15,7 +15,7 @@ targets = {
   'mens-watches.html' => ['designer watches for men', 'minimalist watches for men; contemporary men’s watches'],
   'womens-watches.html' => ['designer watches for women', 'minimalist watches for women; elegant watches'],
   'signature.html' => ['signature watch collection', 'contemporary watch design; timeless watch aesthetics'],
-  'about-us.html' => ['Sandy D Carter watch brand', 'India-registered watch brand; Amsterdam-inspired design'],
+  'about-us.html' => ['Sandy D Carter watch brand', 'Netherlands-developed watch brand; Amsterdam-inspired design'],
   'about-sandy-d-carter.html' => ['About Sandy D Carter', 'brand owner; House Of Brands Fashion LLP; quartz watches'],
   'story-behind-the-brand/index.html' => ['Story Behind Sandy D. Carter', 'Amsterdam design inspiration; fictional creative personalities'],
   'design-philosophy.html' => ['watch design philosophy', 'minimalist watch design; functional aesthetics'],
@@ -107,7 +107,7 @@ report << <<~MD
   - Homepage: brand and official-site discovery.
   - Shop: pre-launch collection discovery without purchase intent claims.
   - Men, Women and Signature: distinct collection-design and styling intent.
-  - About: factual brand identity, legal company relationship, India operations and product focus.
+  - About: factual Netherlands development origin, global partner relationship, India launch plans and product focus.
   - Brand information: direct question-and-answer references for search and answer systems.
   - Our Story: Amsterdam design inspiration, fictional creative personalities and the relationship between imagination and precision.
   - Design Philosophy and Netherlands: design education and Amsterdam/Dutch influence.
