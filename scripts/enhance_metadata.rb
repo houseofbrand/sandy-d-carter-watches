@@ -6,7 +6,7 @@ require 'json'
 require 'pathname'
 
 root = Pathname.new(__dir__).join('..').expand_path
-files = Dir[root.join('public', '*.html')].sort
+files = Dir[root.join('public', '**', '*.html')].sort
 
 files.each do |path|
   html = File.read(path)
@@ -43,7 +43,7 @@ files.each do |path|
   additions << %(<meta name="twitter:title" content="#{title}">) unless html.include?('name="twitter:title"')
   additions << %(<meta name="twitter:description" content="#{description}">) unless html.include?('name="twitter:description"')
   additions << %(<meta name="twitter:image" content="#{image}">) if image && !html.include?('name="twitter:image"')
-  additions << %(<meta property="og:image:alt" content="SANDY D CARTER — Amsterdam-inspired contemporary watch design">) if image && !html.include?('property="og:image:alt"')
+  additions << %(<meta property="og:image:alt" content="SANDY D. CARTER — Amsterdam-inspired contemporary watch design">) if image && !html.include?('property="og:image:alt"')
 
   html.sub!('</head>', "#{additions.join}\n</head>") unless additions.empty?
   File.write(path, html)

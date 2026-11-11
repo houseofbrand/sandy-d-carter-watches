@@ -13,7 +13,7 @@ Structured `Article` data is included directly in static article pages where ava
 
 | Article | URL | Type | Journal link | Sitemap |
 |---|---|---|---|---|
-| The Story Behind SANDY D CARTER | `/our-story.html` | Brand story | Yes | Yes |
+| The Story Behind SANDY D. CARTER | `/story-behind-the-brand/` | Foundational brand story | Yes | Yes |
 | Amsterdam and the Art of Minimalist Design | `/netherlands.html` | Design influence | Yes | Yes |
 | Why Minimalism Matters in Watch Design | `/minimalist-watches.html` | Design principle | Yes | Yes |
 | Purposeful Simplicity in European Design | `/scandinavian-design-watches.html` | Design history | Yes | Yes |

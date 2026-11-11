@@ -16,10 +16,13 @@ def clean_html(value)
   CGI.unescapeHTML(value.to_s.gsub(/<[^>]+>/, ' ').gsub(/\s+/, ' ').strip)
 end
 
-html_paths = Dir[public_dir.join('*.html')].sort
+html_paths = Dir[public_dir.join('**', '*.html')].sort
 html_paths.each do |path|
-  name = File.basename(path)
+  path = Pathname.new(path)
+  name = path.relative_path_from(public_dir).to_s
   html = File.read(path)
+  base_href = html[/<base\s+href="([^"]+)"/m, 1]
+  reference_base = base_href ? path.dirname.join(base_href).cleanpath : path.dirname
   title = clean_html(html[/<title>(.*?)<\/title>/m, 1])
   description = html[/<meta\s+name="description"\s+content="([^"]+)"/m, 1].to_s
   h1s = html.scan(/<h1(?:\s[^>]*)?>(.*?)<\/h1>/m).flatten
@@ -44,8 +47,9 @@ html_paths.each do |path|
     next if reference.match?(/\A(?:https?:|mailto:|tel:|#|data:)/)
     local = reference.split(/[?#]/).first
     next if local.nil? || local.empty?
-    target = public_dir.join(local).cleanpath
-    errors << "#{name}: missing local reference #{local}" unless target.file?
+    target = reference_base.join(local).cleanpath
+    resolved = target.file? || target.join('index.html').file?
+    errors << "#{name}: missing local reference #{local}" unless resolved
   end
 
   titles[title] << name unless title.empty?
@@ -62,6 +66,7 @@ REXML::XPath.each(sitemap, "//*[local-name()='loc']") do |node|
   relative = 'index.html' if relative.empty?
   sitemap_paths << relative
   target = public_dir.join(relative)
+  target = target.join('index.html') if target.directory?
   errors << "sitemap: missing target #{relative}" unless target.file?
   errors << "sitemap: noindex target #{relative}" if target.file? && File.read(target).match?(/name="robots"\s+content="[^"]*noindex/i)
 end
@@ -71,7 +76,7 @@ end
 end
 
 forbidden_schema = /"@type":"(?:Product|Offer|AggregateRating|Review|LocalBusiness)"/
-Dir[public_dir.join('*.html')].each do |path|
+Dir[public_dir.join('**', '*.html')].each do |path|
   html = File.read(path)
   errors << "#{File.basename(path)}: forbidden schema type" if html.match?(forbidden_schema)
 end
