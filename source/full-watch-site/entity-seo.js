@@ -6,8 +6,8 @@ const render=e=>{const main=$('#main');if(main)main.innerHTML=`<section class="p
 
 document.querySelectorAll('.footer-col a[href="about-us.html"]').forEach(a=>{a.href=brand.aboutPath;a.textContent='Brand facts'});
 document.querySelectorAll('.mobile-nav').forEach(nav=>{if(!nav.querySelector(`[href="${brand.aboutPath}"]`)){const a=document.createElement('a');a.href=brand.aboutPath;a.textContent='About the brand';nav.insertBefore(a,nav.querySelector('[href="contact.html"]'))}});
-const footerBrand=$('.footer-brand');if(footerBrand){let p=footerBrand.querySelector('.footer-brand-description, p');if(!p){p=document.createElement('p');footerBrand.querySelector('.footer-social')?.before(p)}p.className='footer-brand-description';p.textContent=brand.shortDescription;footerBrand.querySelectorAll('.footer-corporate').forEach(n=>n.remove());p.insertAdjacentHTML('afterend','<div class="footer-corporate"><p>Global Development &amp; Marketing Partner: House Of Brands Fashion LLP, India.</p><p>Myntra Partnership | India Debut: December 2026.</p></div>')}
-const fs=$('.footer-studio');if(fs)fs.innerHTML=`<h3>Our Amsterdam design inspiration</h3><address><strong>${brand.address.reference}</strong><span>${brand.address.street}</span><span>${brand.address.postal}</span><span>${brand.address.country}</span></address><p class="studio-note">This is Droog’s location and a reference to the brand’s design inspiration, not a SANDY D. CARTER registered or operating office.</p>`;
+const footerBrand=$('.footer-brand');if(footerBrand){footerBrand.querySelectorAll('.footer-brand-description,.footer-corporate').forEach(n=>n.remove())}
+const fs=$('.footer-studio');if(fs)fs.innerHTML=`<h3>Our Amsterdam design inspiration</h3><address><strong>${brand.address.reference}</strong><span>${brand.address.street}</span><span>${brand.address.postal}</span><span>${brand.address.country}</span></address>`;
 const ft=$('.footer-bottom span:last-child');if(ft)ft.textContent=brand.tagline;
 
 if(page==='home'){
