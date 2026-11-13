@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://watches.sandydcarter.com/sitemap.xml

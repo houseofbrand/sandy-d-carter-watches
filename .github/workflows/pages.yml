@@ -23,6 +23,8 @@ jobs:
     steps:
       - name: Check out repository
         uses: actions/checkout@v4
+      - name: Install content build dependency
+        run: pip install beautifulsoup4==4.14.3
       - name: Build static pages
         run: python3 site/build.py
       - name: Validate site

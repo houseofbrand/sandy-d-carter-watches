@@ -2,6 +2,8 @@
 
 One source for the parent brand website and its watch-subdomain mirror.
 
+Current direction: the established full editorial layout, restored at the user’s request. `site/classic/public` holds the original design, and `site/build.py` applies concise copy updates while retaining its sections, photography, navigation and responsive CSS. `site/build_minimal.py` is the superseded minimal design, retained only for reference.
+
 - `site/build.py`: shared HTML components and build-time rendering.
 - `site/pages.json`: concise page-specific content.
 - `site/edition.css` and `site/edition.js`: responsive design and progressive enhancement.
@@ -11,7 +13,7 @@ One source for the parent brand website and its watch-subdomain mirror.
 
 Build with Python 3.9+: `python3 site/build.py`.
 Validate with Python 3.9+: `python3 scripts/validate.py public`.
-The GitHub workflow rebuilds and validates before deployment. No npm install, browser render or external font service is required.
+The GitHub workflow rebuilds and validates before deployment. Install the copy build dependency with `pip install beautifulsoup4==4.14.3`. The restored design retains its original Google Fonts typography.
 
 ## Parent publishing
 
