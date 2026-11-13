@@ -61,5 +61,5 @@ def edit(text,path):
  for el in soup.select('.reveal'):el['class']=list(dict.fromkeys(el.get('class',[])+['visible']))
  head=soup.find('head')
  if head:
-  css=soup.new_tag('link',rel='stylesheet',href='copy-edit.css?v=20261113b');head.append(css)
+  css=soup.new_tag('link',rel='stylesheet',href='copy-edit.css?v=20261113-mobile');head.append(css)
  return str(soup)

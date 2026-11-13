@@ -21,7 +21,7 @@ for f in out.rglob('*.html'):
  s=f.read_text()
  for before,after in replacements.items():s=s.replace(before,after)
  s=re.sub(r'<script src="[^"]+"[^>]*></script>','',s)
- s=s.replace('</body>','<script src="classic-interactions.js?v=20261113"></script></body>')
+ s=s.replace('</body>','<script src="classic-interactions.js?v=20261113-mobile"></script></body>')
  s=s.replace('</head>','<style>.reveal{opacity:1!important;transform:none!important}@media(max-width:600px){.world-hero-copy h1{font-size:clamp(36px,9vw,56px)!important;overflow-wrap:normal}.world-hero-copy{max-width:100%}img{max-width:100%}}</style></head>')
  s=s.replace('https://watches.sandydcarter.com','https://sandydcarter.com')
  s=s.replace('shop.html#collection-story','shop.html')
@@ -30,7 +30,7 @@ for f in out.rglob('*.html'):
  s=edit(s,f.relative_to(out).as_posix())
  f.write_text('\n'.join(line.rstrip() for line in s.splitlines())+'\n')
 shutil.copy2(ROOT/'copy-edit.css',out/'copy-edit.css')
-(out/'classic-interactions.js').write_text("const menu=document.querySelector('.menu-button'),mobile=document.querySelector('.mobile-nav');menu?.addEventListener('click',()=>{const open=mobile.classList.toggle('open');menu.setAttribute('aria-expanded',String(open));menu.textContent=open?'×':'☰'});document.addEventListener('keydown',e=>{if(e.key==='Escape'){mobile?.classList.remove('open');menu?.setAttribute('aria-expanded','false')}});")
+shutil.copy2(ROOT/'classic-interactions.js',out/'classic-interactions.js')
 for name in ['sitemap.xml','robots.txt','llms.txt']:
  f=out/name
  if f.exists():f.write_text(f.read_text().replace('https://watches.sandydcarter.com','https://sandydcarter.com'))
