@@ -5,6 +5,8 @@ from pathlib import Path
 ROOT=Path(__file__).resolve().parent
 p=argparse.ArgumentParser();p.add_argument('--output',default=str(ROOT.parent/'public'));p.add_argument('--host',default='watches.sandydcarter.com');a=p.parse_args();out=Path(a.output)
 shutil.copytree(ROOT/'classic/public',out,dirs_exist_ok=True)
+for page in ['founder.html','our-journey.html']:
+ shutil.copy2(out/'about-us.html',out/page)
 shutil.copy2(ROOT/'assets/brand/official-logo.png',out/'assets/brand/official-logo.png')
 shutil.copy2(ROOT/'product-data.json',out/'product-data.json')
 replacements={
@@ -38,11 +40,24 @@ for f in out.rglob('*.html'):
  s=re.sub(r'<figcaption>Conceptual illustration[^<]*</figcaption>','<figcaption>Collection design study</figcaption>',s)
  s=edit(s,f.relative_to(out).as_posix())
  f.write_text('\n'.join(line.rstrip() for line in s.splitlines())+'\n')
+# The rebuilt pages use one progressive-enhancement script only. Remove legacy
+# runtime renderers so stale claims cannot be executed, indexed or bundled.
+for name in ['brand-data.js','edition.js','enhancements.js','entity-seo.js','refinement.js','site.js']:
+ f=out/name
+ if f.exists():f.unlink()
 shutil.copy2(ROOT/'copy-edit.css',out/'copy-edit.css')
+shutil.copy2(ROOT/'heritage.css',out/'heritage.css')
 shutil.copy2(ROOT/'classic-interactions.js',out/'classic-interactions.js')
 for name in ['sitemap.xml','robots.txt','llms.txt']:
  f=out/name
  if f.exists():f.write_text(f.read_text().replace('https://watches.sandydcarter.com','https://sandydcarter.com'))
+sitemap=out/'sitemap.xml'
+if sitemap.exists():
+ s=sitemap.read_text()
+ additions='''  <url><loc>https://sandydcarter.com/founder.html</loc><lastmod>2026-11-22</lastmod><priority>0.8</priority></url>\n  <url><loc>https://sandydcarter.com/our-journey.html</loc><lastmod>2026-11-22</lastmod><priority>0.8</priority></url>\n'''
+ if 'founder.html' not in s:s=s.replace('</urlset>',additions+'</urlset>')
+ s=re.sub(r'<lastmod>2026-11-11</lastmod>','<lastmod>2026-11-22</lastmod>',s)
+ sitemap.write_text(s)
 if a.host=='watches.sandydcarter.com':(out/'CNAME').write_text(a.host+'\n')
 elif (out/'CNAME').exists():(out/'CNAME').unlink()
 print('Restored original design across',len(list(out.rglob('*.html'))),'pages')
