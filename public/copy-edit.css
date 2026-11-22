@@ -55,5 +55,23 @@ main img{max-width:100%}
 .collection-preview{margin-top:clamp(4rem,7vw,7rem);padding-top:clamp(3rem,5vw,5rem);border-top:1px solid #c9c7bf}.collection-preview>h2{font-family:'Playfair Display',Georgia,serif;font-size:clamp(2.4rem,4.2vw,4.5rem);line-height:1;margin:1rem 0 1.5rem}.preview-intro{max-width:43rem!important}.preview-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:#cbc9c1;margin:3rem 0}.preview-cards article{background:#f6f4ee;padding:clamp(1.5rem,2.5vw,2.5rem);min-height:19rem;display:flex;flex-direction:column}.preview-cards span{font-size:.7rem;opacity:.55}.preview-cards h3{font-family:'Playfair Display',Georgia,serif;font-size:1.8rem;margin:2.4rem 0 1rem}.preview-cards p{font-size:.9rem!important;line-height:1.7}.preview-cards b{margin-top:auto;padding-top:2rem;font-size:.68rem;text-transform:uppercase;letter-spacing:.1em;font-weight:500}.notify-form{padding:clamp(1.5rem,3vw,2.5rem);background:#ece9e0}.notify-form>div:first-of-type{display:grid;grid-template-columns:1.2fr .8fr;gap:1.5rem}.retail-enquiry{margin-top:4rem;padding-top:3rem;border-top:1px solid #cbc9c1}.retail-enquiry>h2{font-family:'Playfair Display',Georgia,serif;font-size:clamp(2.4rem,4vw,4rem);margin:1rem 0}.retail-enquiry>p{margin-bottom:2rem}.retail-form{padding:clamp(1.5rem,3vw,2.5rem);background:#f0eee7}
 .whatsapp-float{position:fixed;z-index:60;right:1.25rem;bottom:1.25rem;display:flex;align-items:center;gap:.65rem;background:#173a2b;color:#fff;padding:.75rem 1rem;border:1px solid #ffffff30;box-shadow:0 10px 30px #0003;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase}.whatsapp-float span{display:grid;place-items:center;width:1.8rem;height:1.8rem;border:1px solid #fff;border-radius:50%;font-size:.55rem}.whatsapp-float b{font-weight:500}
 .brand img,.footer-brand img{object-fit:contain}
+/* Present the supplied metallic-gold master as a luxury mark, without editing it. */
+.site-header,.site-header.solid{
+  min-height:6rem;
+  padding:0 clamp(24px,4.5vw,72px);
+  background:linear-gradient(100deg,#081722 0%,#0d2333 52%,#07141e 100%);
+  color:#f5efe3;
+  border-bottom:1px solid rgba(207,161,64,.42);
+  box-shadow:0 10px 32px rgba(3,12,18,.16);
+  backdrop-filter:blur(18px);
+}
+.site-header .brand{width:auto;display:flex;align-items:center;padding:.65rem 0}
+.site-header .brand img{width:clamp(190px,16.5vw,236px);height:auto;filter:drop-shadow(0 3px 12px rgba(214,169,62,.16))}
+.site-header .nav a{color:#f5efe3;opacity:.86;transition:opacity .2s,color .2s}.site-header .nav a:hover,.site-header .nav a:focus-visible{color:#fff;opacity:1}.site-header .nav a:after{background:#d5a83f}
+.site-header .launch-pill{border-color:rgba(213,168,63,.64);color:#f5efe3;background:rgba(213,168,63,.06);transition:background .2s,border-color .2s}.site-header .launch-pill:hover,.site-header .launch-pill:focus-visible{background:rgba(213,168,63,.16);border-color:#d5a83f}
+.site-header .menu-button{color:#e2b64e}
+.prelaunch-banner{border-bottom:1px solid rgba(213,168,63,.22)}
 @media(max-width:980px){.launch-acquisition{grid-template-columns:1fr;gap:3rem}.trust-rail{grid-template-columns:1fr 1fr}.trust-rail>div:nth-child(2){border-right:0}.preview-cards{grid-template-columns:1fr}.preview-cards article{min-height:14rem}}
 @media(max-width:620px){.form-grid,.notify-form>div:first-of-type{grid-template-columns:1fr}.form-grid .full{grid-column:auto}.trust-rail{grid-template-columns:1fr}.trust-rail>div{border-right:0}.launch-acquisition{padding-inline:1.25rem}.launch-copy h2{font-size:3.4rem}.lead-actions{align-items:stretch;flex-direction:column}.lead-actions .button,.lead-actions .text-link{width:100%;justify-content:center}.whatsapp-float{right:.8rem;bottom:.8rem;padding:.65rem}.whatsapp-float b{display:none}}
+@media(max-width:980px){.site-header,.site-header.solid{min-height:5rem;padding:0 clamp(16px,4vw,28px)}.site-header .brand{padding:.45rem 0}.site-header .brand img{width:clamp(158px,26vw,190px)}.site-header .mobile-nav.open{top:100%;background:#0b1e2b;color:#f5efe3;border-top:1px solid rgba(213,168,63,.28);box-shadow:0 18px 35px rgba(0,0,0,.32)}.site-header .mobile-nav a{color:#f5efe3;border-bottom-color:rgba(255,255,255,.12)}}
+@media(max-width:620px){.site-header,.site-header.solid{min-height:4.75rem}.site-header .brand img{width:154px}.site-header .menu-button{font-size:1.25rem}}
