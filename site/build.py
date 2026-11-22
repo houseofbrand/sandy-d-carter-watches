@@ -5,9 +5,10 @@ from pathlib import Path
 ROOT=Path(__file__).resolve().parent
 p=argparse.ArgumentParser();p.add_argument('--output',default=str(ROOT.parent/'public'));p.add_argument('--host',default='watches.sandydcarter.com');a=p.parse_args();out=Path(a.output)
 shutil.copytree(ROOT/'classic/public',out,dirs_exist_ok=True)
-for page in ['founder.html','our-journey.html']:
+for page in ['founder.html','our-journey.html','our-people.html']:
  shutil.copy2(out/'about-us.html',out/page)
 shutil.copy2(ROOT/'assets/brand/official-logo.png',out/'assets/brand/official-logo.png')
+shutil.copy2(ROOT/'assets/brand/packaging-reference.jpeg',out/'assets/brand/packaging-reference.jpeg')
 shutil.copy2(ROOT/'product-data.json',out/'product-data.json')
 replacements={
 'Scandinavian-inspired minimalism, balanced proportions and contemporary quartz timepieces for men and women. In global alliance with House Of Brands Fashion LLP, India.':'Clean dials, balanced proportions and quartz watches for men and women.',
@@ -47,6 +48,7 @@ for name in ['brand-data.js','edition.js','enhancements.js','entity-seo.js','ref
  if f.exists():f.unlink()
 shutil.copy2(ROOT/'copy-edit.css',out/'copy-edit.css')
 shutil.copy2(ROOT/'heritage.css',out/'heritage.css')
+shutil.copy2(ROOT/'brand-refresh.css',out/'brand-refresh.css')
 shutil.copy2(ROOT/'classic-interactions.js',out/'classic-interactions.js')
 for name in ['sitemap.xml','robots.txt','llms.txt']:
  f=out/name
@@ -54,7 +56,7 @@ for name in ['sitemap.xml','robots.txt','llms.txt']:
 sitemap=out/'sitemap.xml'
 if sitemap.exists():
  s=sitemap.read_text()
- additions='''  <url><loc>https://sandydcarter.com/founder.html</loc><lastmod>2026-11-22</lastmod><priority>0.8</priority></url>\n  <url><loc>https://sandydcarter.com/our-journey.html</loc><lastmod>2026-11-22</lastmod><priority>0.8</priority></url>\n'''
+ additions='''  <url><loc>https://sandydcarter.com/founder.html</loc><lastmod>2026-11-22</lastmod><priority>0.8</priority></url>\n  <url><loc>https://sandydcarter.com/our-people.html</loc><lastmod>2026-11-22</lastmod><priority>0.8</priority></url>\n  <url><loc>https://sandydcarter.com/our-journey.html</loc><lastmod>2026-11-22</lastmod><priority>0.8</priority></url>\n'''
  if 'founder.html' not in s:s=s.replace('</urlset>',additions+'</urlset>')
  s=re.sub(r'<lastmod>2026-11-11</lastmod>','<lastmod>2026-11-22</lastmod>',s)
  sitemap.write_text(s)
