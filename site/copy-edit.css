@@ -55,7 +55,7 @@ main img{max-width:100%}
 .collection-preview{margin-top:clamp(4rem,7vw,7rem);padding-top:clamp(3rem,5vw,5rem);border-top:1px solid #c9c7bf}.collection-preview>h2{font-family:'Playfair Display',Georgia,serif;font-size:clamp(2.4rem,4.2vw,4.5rem);line-height:1;margin:1rem 0 1.5rem}.preview-intro{max-width:43rem!important}.preview-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:#cbc9c1;margin:3rem 0}.preview-cards article{background:#f6f4ee;padding:clamp(1.5rem,2.5vw,2.5rem);min-height:19rem;display:flex;flex-direction:column}.preview-cards span{font-size:.7rem;opacity:.55}.preview-cards h3{font-family:'Playfair Display',Georgia,serif;font-size:1.8rem;margin:2.4rem 0 1rem}.preview-cards p{font-size:.9rem!important;line-height:1.7}.preview-cards b{margin-top:auto;padding-top:2rem;font-size:.68rem;text-transform:uppercase;letter-spacing:.1em;font-weight:500}.notify-form{padding:clamp(1.5rem,3vw,2.5rem);background:#ece9e0}.notify-form>div:first-of-type{display:grid;grid-template-columns:1.2fr .8fr;gap:1.5rem}.retail-enquiry{margin-top:4rem;padding-top:3rem;border-top:1px solid #cbc9c1}.retail-enquiry>h2{font-family:'Playfair Display',Georgia,serif;font-size:clamp(2.4rem,4vw,4rem);margin:1rem 0}.retail-enquiry>p{margin-bottom:2rem}.retail-form{padding:clamp(1.5rem,3vw,2.5rem);background:#f0eee7}
 .whatsapp-float{position:fixed;z-index:60;right:1.25rem;bottom:1.25rem;display:flex;align-items:center;gap:.65rem;background:#173a2b;color:#fff;padding:.75rem 1rem;border:1px solid #ffffff30;box-shadow:0 10px 30px #0003;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase}.whatsapp-float span{display:grid;place-items:center;width:1.8rem;height:1.8rem;border:1px solid #fff;border-radius:50%;font-size:.55rem}.whatsapp-float b{font-weight:500}
 .brand img,.footer-brand img{object-fit:contain}
-/* Present the supplied metallic-gold master as a luxury mark, without editing it. */
+/* Tone the supplied master to the site palette without altering its artwork. */
 .site-header,.site-header.solid{
   min-height:6rem;
   padding:0 clamp(24px,4.5vw,72px);
@@ -66,7 +66,9 @@ main img{max-width:100%}
   backdrop-filter:blur(18px);
 }
 .site-header .brand{width:auto;display:flex;align-items:center;padding:.65rem 0}
-.site-header .brand img{width:clamp(190px,16.5vw,236px);height:auto;filter:drop-shadow(0 3px 12px rgba(214,169,62,.16))}
+.site-header .brand img,.footer-brand img{filter:grayscale(1) brightness(0) invert(94%) sepia(9%) saturate(286%) hue-rotate(342deg) brightness(105%) contrast(96%) drop-shadow(0 3px 12px rgba(0,0,0,.18))}
+.site-header .brand img{width:clamp(190px,16.5vw,236px);height:auto}
+.footer-brand img{opacity:.96}
 .site-header .nav a{color:#f5efe3;opacity:.86;transition:opacity .2s,color .2s}.site-header .nav a:hover,.site-header .nav a:focus-visible{color:#fff;opacity:1}.site-header .nav a:after{background:#d5a83f}
 .site-header .launch-pill{border-color:rgba(213,168,63,.64);color:#f5efe3;background:rgba(213,168,63,.06);transition:background .2s,border-color .2s}.site-header .launch-pill:hover,.site-header .launch-pill:focus-visible{background:rgba(213,168,63,.16);border-color:#d5a83f}
 .site-header .menu-button{color:#e2b64e}
