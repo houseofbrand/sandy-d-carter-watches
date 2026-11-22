@@ -3,7 +3,7 @@ import argparse,re,shutil
 from copy_edit import edit
 from pathlib import Path
 ROOT=Path(__file__).resolve().parent
-p=argparse.ArgumentParser();p.add_argument('--output',default=str(ROOT.parent/'public'));p.add_argument('--host',default='watches.sandydcarter.com');a=p.parse_args();out=Path(a.output)
+p=argparse.ArgumentParser();p.add_argument('--output',default=str(ROOT.parent/'public'));p.add_argument('--host',default='sandydcarter.com');a=p.parse_args();out=Path(a.output)
 shutil.copytree(ROOT/'classic/public',out,dirs_exist_ok=True)
 for page in ['founder.html','our-journey.html','our-people.html']:
  shutil.copy2(out/'about-us.html',out/page)
@@ -60,6 +60,6 @@ if sitemap.exists():
  if 'founder.html' not in s:s=s.replace('</urlset>',additions+'</urlset>')
  s=re.sub(r'<lastmod>2026-11-11</lastmod>','<lastmod>2026-11-22</lastmod>',s)
  sitemap.write_text(s)
-if a.host=='watches.sandydcarter.com':(out/'CNAME').write_text(a.host+'\n')
+if a.host in {'sandydcarter.com','watches.sandydcarter.com'}:(out/'CNAME').write_text(a.host+'\n')
 elif (out/'CNAME').exists():(out/'CNAME').unlink()
 print('Restored original design across',len(list(out.rglob('*.html'))),'pages')
