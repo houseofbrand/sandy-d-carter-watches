@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 1,
+  "currency": "INR",
+  "catalogueStatus": "prelaunch",
+  "plannedLaunch": "2026-12",
+  "marketplace": "Myntra",
+  "products": [],
+  "productTemplate": {
+    "slug": "",
+    "name": "",
+    "reference": "",
+    "collection": "mens | womens | signature",
+    "description": "",
+    "dialColour": "",
+    "caseMaterial": "",
+    "caseDiameterMm": null,
+    "caseThicknessMm": null,
+    "strapMaterial": "",
+    "strapWidthMm": null,
+    "movementType": "",
+    "glassType": "",
+    "waterResistance": "",
+    "price": null,
+    "availability": "coming-soon | enquire | myntra | shop",
+    "images": [],
+    "warranty": ""
+  },
+  "editorialNote": "No product is published until its identity, specifications, price and photography are approved."
+}
